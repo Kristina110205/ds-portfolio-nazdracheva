@@ -96,6 +96,111 @@ bank-churn-ai/
 ## 🚀 Быстрый старт
 
 ### 1. Клонирование репозитория
-```bash
 git clone https://github.com/Kristina110205/ds-portfolio-nazdracheva/new/main/02_projects/bank-churn-ai.git
 cd bank-churn-ai
+
+### 2. Создание виртуального окружения
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+
+### 3. Установка зависимостей
+pip install -r requirements.txt
+
+### 4. Запуск EDA
+jupyter notebook notebooks/01_eda.ipynb
+
+### 5. Обучение модели
+python src/models/churn_model.py --data data/processed/train.csv
+
+## 📊 Данные
+
+### Источники
+- **Kaggle:** [Bank Churn Dataset](https://www.kaggle.com/datasets)
+- **Синтетические данные** для отладки
+
+### Описание признаков
+
+| Признак | Тип | Описание |
+|---------|-----|----------|
+| `customer_id` | ID | Уникальный идентификатор |
+| `age` | int | Возраст клиента |
+| `balance` | float | Баланс счёта |
+| `credit_score` | int | Кредитный рейтинг |
+| `tenure` | int | Лет сотрудничества с банком |
+| `num_products` | int | Кол-во продуктов банка |
+| `is_active_member` | bool | Активность в приложении |
+| `estimated_salary` | float | Предполагаемый доход |
+| `churn` | **target** | 1 = ушёл, 0 = остался |
+
+---
+
+## 📈 Метрики качества
+
+| Метрика | Формула | Почему важна |
+|---------|---------|--------------|
+| **Accuracy** | `(TP+TN)/Total` | Общая точность |
+| **Precision** | `TP/(TP+FP)` | Минимизация ложных срабатываний |
+| **Recall** ⭐ | `TP/(TP+FN)` | Не пропустить уходящих клиентов |
+| **F1-Score** | `2×(P×R)/(P+R)` | Баланс точности и полноты |
+| **ROC-AUC** | Площадь под кривой | Качество ранжирования |
+
+> 💡 **Приоритет:** В задаче оттока важнее максимизировать **Recall** — лучше ложно предупредить уход, чем пропустить реального "беглеца".
+
+---
+
+## 🗓 Дорожная карта
+
+```mermaid
+gantt
+    title План развития BankChurn AI
+    dateFormat  YYYY-MM-DD
+    
+    section Базовый уровень
+    Сбор данных и EDA       :         2027-01-01, 14d
+    Предобработка           :         2027-01-15, 10d
+    Базовые модели          :         2027-01-25, 14d
+    
+    section Продвинутый уровень
+    Ансамбли и тюнинг       :         2027-02-10, 14d
+    Feature Engineering     :         2027-02-24, 14d
+    Интерпретация (SHAP)    :         2027-03-10, 10d
+    
+    section Профи / Продакшн
+    API на FastAPI          :         2027-03-20, 14d
+    Docker + деплой         :         2027-04-03, 14d
+    Мониторинг дрейфа       :         2027-04-17, 14d
+
+---
+
+## 🤝 Как внести вклад
+
+Мы всегда рады вашему участию! Следуйте этим шагам:
+
+1. **Форкните** репозиторий
+2. **Создайте ветку** для вашей фичи:
+   ```bash
+   git checkout -b feature/amazing-feature
+3. Закоммитьте изменения:
+git commit -m 'Add: amazing feature'
+4. Запушьте ветку:
+git push origin feature/amazing-feature
+5. Откройте Pull Request
+
+## 🧪 Тестирование
+# Запустить все тесты
+pytest tests/
+
+# Проверить стиль кода
+flake8 src/
+
+# Проверить форматирование
+black --check src/
+
+# Запустить конкретный тест
+pytest tests/test_model.py -v
+
