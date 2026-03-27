@@ -205,3 +205,24 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Jupyter Notebooks
+*.ipynb_checkpoints/
+
+# Data (большие файлы не храним в репо)
+data/*.csv
+data/*.parquet
+!data/.gitkeep
+
+# Models
+models/*.pkl
+models/*.h5
+!models/.gitkeep
+
+# Environment
+.env
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
