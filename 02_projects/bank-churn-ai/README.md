@@ -96,26 +96,38 @@ bank-churn-ai/
 ## 🚀 Быстрый старт
 
 ### 1. Клонирование репозитория
-git clone https://github.com/Kristina110205/ds-portfolio-nazdracheva/new/main/02_projects/bank-churn-ai.git
+```bash
+git clone https://github.com/Kristina110205/ds-portfolio-nazdracheva.git
 cd bank-churn-ai
+```
 
 ### 2. Создание виртуального окружения
 # Windows
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
 # macOS/Linux
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 ### 3. Установка зависимостей
+```bash
 pip install -r requirements.txt
+```
 
 ### 4. Запуск EDA
+```bash
 jupyter notebook notebooks/01_eda.ipynb
+```
 
 ### 5. Обучение модели
+```bash
 python src/models/churn_model.py --data data/processed/train.csv
+```
 
 ## 📊 Данные
 
