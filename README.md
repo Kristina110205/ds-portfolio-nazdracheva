@@ -50,7 +50,7 @@
 ## 📬 Контакты
 - 📧 nazdrachevasa@gmail.com
 - 💬 Telegram: @kristinalarse
-- 📝 **Дзен:** [dzen.ru/vsegdasdushoi]
+- 📝 **Дзен:** dzen.ru/vsegdasdushoi
 - 🌐 **Резюме:** [ссылка на резюме — добавлю позже]
 
 ---
