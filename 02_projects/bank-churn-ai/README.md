@@ -165,7 +165,6 @@ python src/models/churn_model.py --data data/processed/train.csv
 
 ---
 
-## 🗓 Дорожная карта
 
 ## 🗓 Дорожная карта
 
