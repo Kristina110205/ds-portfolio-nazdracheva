@@ -29,14 +29,15 @@
 ---
 
 ## ✨ Функционал
-✅ Загрузка и предобработка табличных данных
-✅ Разведочный анализ (EDA) с визуализацией
-✅ Обучение моделей: Logistic Regression, Random Forest, CatBoost
-✅ Оценка метрик: Accuracy, Precision, Recall, ROC-AUC, F1
-✅ Объяснение предсказаний (feature importance, SHAP)
-✅ Экспорт модели в pickle/onnx
-✅ API для предсказаний (FastAPI) — в разработке
-✅ Дашборд для бизнес-пользователей (Streamlit) — в разработке
+
+- ✅ Загрузка и предобработка табличных данных
+- ✅ Разведочный анализ (EDA) с визуализацией
+- ✅ Обучение моделей: Logistic Regression, Random Forest, CatBoost
+- ✅ Оценка метрик: Accuracy, Precision, Recall, ROC-AUC, F1
+- ✅ Объяснение предсказаний (feature importance, SHAP)
+- ✅ Экспорт модели в pickle/onnx
+- ✅ API для предсказаний (FastAPI) — в разработке
+- ✅ Дашборд для бизнес-пользователей (Streamlit) — в разработке
 
 
 ---
